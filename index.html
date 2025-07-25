@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InverseStack | Learn Tech Backwards</title>
+  <style>
+    :root {
+      --bg: #1e1e2e;
+      --text: #f8f8f2;
+      --accent: #bd93f9;
+    }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .btn {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Learn tech tools <span class="typing-effect">backwards.</span></h1>
+    <p>Deconstruct the stack, layer by layer, mastering its foundational tools as you go.</p>
+    <a href="#waitlist" class="btn">Join Waitlist</a>
+    
+    <div class="features">
+      <div class="feature">
+        <h3>🔍 GUI → CLI</h3>
+        <p>Master the tools of the stack, from GUI to CLI.</p>
+      </div>
+      <!-- Add more features -->
+    </div>
+  </div>
+
+  <!-- Typing effect script -->
+  <script src="https://unpkg.com/typed.js@2.0.16"></script>
+  <script>
+    new Typed('.typing-effect', {
+      strings: ['backwards.', 'inside out.', 'sequentially.'],
+      typeSpeed: 50,
+      loop: true
+    });
+  </script>
+</body>
+</html>
