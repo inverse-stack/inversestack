@@ -27,6 +27,25 @@
       padding: 0.8rem 1.5rem;
       border: none;
       font-family: inherit;
+      cursor: pointer;
+    }
+    /* New form styles */
+    #waitlist-form {
+      margin: 2rem 0;
+    }
+    #waitlist-form input[type="email"] {
+      padding: 0.8rem;
+      width: 300px;
+      background: #2d2d3a;
+      color: var(--text);
+      border: 1px solid var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      margin-right: 0.5rem;
+    }
+    .consent-label {
+      display: block;
+      margin: 1rem 0;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -34,7 +53,21 @@
   <div class="container">
     <h1>Learn tech tools <span class="typing-effect">backwards.</span></h1>
     <p>Deconstruct the stack, layer by layer, mastering its foundational tools as you go.</p>
-    <a href="#waitlist" class="btn">Join Waitlist</a>
+    
+    <!-- Updated Waitlist Form -->
+    <div id="waitlist-form">
+      <h2>Join the Waitlist</h2>
+      <form action="https://formsubmit.co/notifications@inversestack.com" method="POST">
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit" class="btn">Get Updates</button>
+        <input type="hidden" name="_next" value="https://inversestack.com/thank-you.html">
+        <input type="hidden" name="_subject" value="New InverseStack Signup">
+        <div class="consent-label">
+          <input type="checkbox" id="consent" required>
+          <label for="consent">I agree to receive educational emails from InverseStack</label>
+        </div>
+      </form>
+    </div>
     
     <div class="features">
       <div class="feature">
