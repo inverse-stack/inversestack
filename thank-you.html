@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | InverseStack</title>
+  <style>
+    :root {
+      --bg: #1e1e2e;
+      --text: #f8f8f2;
+      --accent: #bd93f9;
+    }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .btn {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      font-family: inherit;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
+    }
+    .loader {
+      border: 3px solid #2d2d3a;
+      border-top: 3px solid var(--accent);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      margin: 2rem auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thank You! 🎉</h1>
+    <p>You've been added to the InverseStack waitlist.</p>
+    <p>We'll notify you when we launch our first tutorials.</p>
+    
+    <div class="loader"></div>
+    <p>Redirecting back to InverseStack in <span id="countdown">5</span> seconds...</p>
+    
+    <a href="https://inversestack.com" class="btn">Return Now</a>
+  </div>
+
+  <script>
+    // Countdown timer
+    let seconds = 5;
+    const countdown = setInterval(() => {
+      document.getElementById('countdown').textContent = --seconds;
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        window.location.href = "https://inversestack.com";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
